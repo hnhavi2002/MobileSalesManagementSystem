@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MinhTuanMobile_DBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MinhTuanMobile_DB.dbo.Report_DH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Report_DH">
+          <Key>
+            <PropertyRef Name="MaDH" />
+            <PropertyRef Name="TenKH" />
+            <PropertyRef Name="TenCN" />
+            <PropertyRef Name="PhuongThucTT" />
+          </Key>
+          <Property Name="DiaChiCN" Type="nvarchar" MaxLength="250" />
+          <Property Name="SDTCN" Type="nchar" MaxLength="10" />
+          <Property Name="SDTKH" Type="nchar" MaxLength="10" />
+          <Property Name="DiaChiKH" Type="nvarchar" MaxLength="250" />
+          <Property Name="MaDH" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenKH" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TenNV" Type="nvarchar" MaxLength="50" />
+          <Property Name="TenCN" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PhuongThucTT" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="TenSP" Type="nvarchar" MaxLength="150" />
+          <Property Name="GiaBan" Type="float" />
+          <Property Name="SoLuongMua" Type="int" />
+          <Property Name="Discount" Type="float" />
+          <Property Name="ThanhTien" Type="float" />
+          <Property Name="TongTien" Type="float" />
+          <Property Name="NgayTao" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="MinhTuanMobile_DBModel1StoreContainer">
+          <EntitySet Name="Report_DH" EntityType="Self.Report_DH" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Report_DH].[DiaChiCN] AS [DiaChiCN], 
+    [Report_DH].[SDTCN] AS [SDTCN], 
+    [Report_DH].[SDTKH] AS [SDTKH], 
+    [Report_DH].[DiaChiKH] AS [DiaChiKH], 
+    [Report_DH].[MaDH] AS [MaDH], 
+    [Report_DH].[TenKH] AS [TenKH], 
+    [Report_DH].[TenNV] AS [TenNV], 
+    [Report_DH].[TenCN] AS [TenCN], 
+    [Report_DH].[PhuongThucTT] AS [PhuongThucTT], 
+    [Report_DH].[TenSP] AS [TenSP], 
+    [Report_DH].[GiaBan] AS [GiaBan], 
+    [Report_DH].[SoLuongMua] AS [SoLuongMua], 
+    [Report_DH].[Discount] AS [Discount], 
+    [Report_DH].[ThanhTien] AS [ThanhTien], 
+    [Report_DH].[TongTien] AS [TongTien], 
+    [Report_DH].[NgayTao] AS [NgayTao]
+    FROM [dbo].[Report_DH] AS [Report_DH]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MinhTuanMobile_DBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Report_DH">
+          <Key>
+            <PropertyRef Name="MaDH" />
+            <PropertyRef Name="TenKH" />
+            <PropertyRef Name="TenCN" />
+            <PropertyRef Name="PhuongThucTT" />
+          </Key>
+          <Property Name="DiaChiCN" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SDTCN" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="SDTKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DiaChiKH" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MaDH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TenCN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PhuongThucTT" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenSP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="GiaBan" Type="Double" />
+          <Property Name="SoLuongMua" Type="Int32" />
+          <Property Name="Discount" Type="Double" />
+          <Property Name="ThanhTien" Type="Double" />
+          <Property Name="TongTien" Type="Double" />
+          <Property Name="NgayTao" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="MinhTuanMobile_DBEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Report_DH" EntityType="Self.Report_DH" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MinhTuanMobile_DBModel1StoreContainer" CdmEntityContainer="MinhTuanMobile_DBEntities2">
+          <EntitySetMapping Name="Report_DH">
+            <EntityTypeMapping TypeName="MinhTuanMobile_DBModel1.Report_DH">
+              <MappingFragment StoreEntitySet="Report_DH">
+                <ScalarProperty Name="DiaChiCN" ColumnName="DiaChiCN" />
+                <ScalarProperty Name="SDTCN" ColumnName="SDTCN" />
+                <ScalarProperty Name="SDTKH" ColumnName="SDTKH" />
+                <ScalarProperty Name="DiaChiKH" ColumnName="DiaChiKH" />
+                <ScalarProperty Name="MaDH" ColumnName="MaDH" />
+                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+                <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+                <ScalarProperty Name="TenCN" ColumnName="TenCN" />
+                <ScalarProperty Name="PhuongThucTT" ColumnName="PhuongThucTT" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="GiaBan" ColumnName="GiaBan" />
+                <ScalarProperty Name="SoLuongMua" ColumnName="SoLuongMua" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
